@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>권호성 자기소개</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', sans-serif;
+      background: #fff;
+      color: #333;
+      font-size: 16px;
+      line-height: 1.65;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ── 헤더 ── */
+    header {
+      background: #1F3864;
+      color: #fff;
+      padding: 2.25rem 1.5rem 2rem;
+      text-align: center;
+    }
+
+    /* 원형 프로필 사진 */
+    .profile-photo {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 42%;
+      border: 3px solid #fff;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+
+    .header-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* ── 자기소개 ── */
+    .intro {
+      padding: 1.75rem 1.5rem;
+      border-bottom: 1px solid #333;
+      color: #333;
+    }
+
+    /* ── 경력 ── */
+    .career {
+      padding: 1.5rem 1.5rem 0.5rem;
+    }
+
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #1F3864;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .card {
+      border: 1px solid #333;
+      border-left: 4px solid #1F3864;
+      border-radius: 4px;
+      padding: 1rem 1.125rem;
+      margin-bottom: 0.875rem;
+      background: #fff;
+    }
+
+    .card-period {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #1F3864;
+      margin-bottom: 0.25rem;
+    }
+
+    .card-company {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .card-role {
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    .card-summary {
+      font-size: 0.83rem;
+      color: #333;
+      margin-top: 0.35rem;
+      opacity: 0.75;
+    }
+
+    /* ── 버튼 ── */
+    .actions {
+      padding: 1.25rem 1.5rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 0.9rem 1rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: center;
+      cursor: pointer;
+      text-decoration: none;
+      border: 2px solid #1F3864;
+      transition: opacity 0.15s;
+    }
+
+    .btn:active { opacity: 0.75; }
+
+    .btn-email {
+      background: #1F3864;
+      color: #fff;
+    }
+
+    .btn-phone {
+      background: #fff;
+      color: #1F3864;
+    }
+
+    /* ── 토스트 ── */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      color: #fff;
+      padding: 0.6rem 1.4rem;
+      border-radius: 20px;
+      font-size: 0.875rem;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.25s;
+      pointer-events: none;
+    }
+
+    .toast.show { opacity: 1; }
+
+    /* ── 반응형: 넓은 화면 ── */
+    @media (min-width: 480px) {
+      .actions { flex-direction: row; }
+      .btn { width: auto; flex: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더: 프로필 사진 + 이름 · 직책 -->
+  <header>
+    <img
+      class="profile-photo"
+      src="여권(3.5x4.5cm).jpg"
+      alt="권호성 프로필 사진"
+    >
+    <div class="header-name">권호성 &nbsp;·&nbsp; SAP 컨설턴트</div>
+  </header>
+
+  <!-- 자기소개 -->
+  <section class="intro">
+    <p>
+      30년 경력의 글로벌 재무·관리 전문가입니다.<br>
+      지멘스코리아, 셀가드코리아 등 다국적 기업에서<br>
+      CFO·회계 총괄로 재무전략을 이끌어 왔으며,<br>
+      SAP 기반 데이터 분석과 전략적 인사이트로<br>
+      조직의 성장과 의사결정을 지원합니다.
+    </p>
+  </section>
+
+  <!-- 경력 카드 (최신순) -->
+  <section class="career">
+    <div class="section-label">경력</div>
+
+    <div class="card">
+      <div class="card-period">2008 — 2020</div>
+      <div class="card-company">셀가드코리아</div>
+      <div class="card-role">재무담당이사 (CFO)</div>
+      <div class="card-summary">전사 재무전략 수립·실행 및 글로벌 본사 재무보고 총괄</div>
+    </div>
+
+    <div class="card">
+      <div class="card-period">1999 — 2007</div>
+      <div class="card-company">지멘스코리아</div>
+      <div class="card-role">회계부서 총괄 팀장</div>
+      <div class="card-summary">한국법인 회계·결산·내부통제 체계 구축 및 운영</div>
+    </div>
+
+    <div class="card">
+      <div class="card-period">1989 — 1999</div>
+      <div class="card-company">콴타스항공</div>
+      <div class="card-role">관리부서 총괄팀장</div>
+      <div class="card-summary">항공사 한국지사 관리·운영 전반 책임</div>
+    </div>
+  </section>
+
+  <!-- 연락 버튼 -->
+  <section class="actions">
+    <a class="btn btn-email" href="mailto:khs199499@naver.com">이메일 보내기</a>
+    <button class="btn btn-phone" onclick="copyPhone()">전화 걸기</button>
+  </section>
+
+  <div class="toast" id="toast">전화번호가 복사되었습니다</div>
+
+  <script>
+    function copyPhone() {
+      var num = '010-2333-7723';
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(num).then(showToast);
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = num;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        showToast();
+      }
+    }
+
+    function showToast() {
+      var el = document.getElementById('toast');
+      el.classList.add('show');
+      setTimeout(function () { el.classList.remove('show'); }, 2200);
+    }
+  </script>
+
+</body>
+</html>
